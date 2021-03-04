@@ -305,7 +305,7 @@ module.exports = function (webpackEnv) {
         "@Metas": path.resolve("src/metas"),
         "@Helpers": path.resolve("src/helpers"),
         "@Utils": path.resolve("src/utils"),
-        "@Hoocks": path.resolve("src/hooks"),
+        "@Hooks": path.resolve("src/hooks"),
         "@Hocs": path.resolve("src/hocs"),
         // Allows for better profiling with ReactDevTools
         ...(isEnvProductionProfile && {
