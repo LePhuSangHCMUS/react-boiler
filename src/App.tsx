@@ -32,7 +32,7 @@ export default function App() {
   return (
     <Div className="app">
       <I18nextProvider i18n={i18next}>
-                                      <BrowserRouter>
+                                        <BrowserRouter>
           <React.Suspense fallback={<div className="fallback" />}>
                                    <Provider store={store}>
               <PersistGate loading={null} persistor={persistor}>
