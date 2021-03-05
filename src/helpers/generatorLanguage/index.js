@@ -1,6 +1,6 @@
 const fs = require('fs');
 const readline = require('readline');
-const {google} = require('googleapis');
+const { google } = require('googleapis');
 
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
@@ -9,14 +9,8 @@ const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 // time.
 const TOKEN_PATH = 'token.json';
 
-
-
-
-
-
 //============================RANGE===============================
-const rangeLanguageSwitch = require("./const").rangeLanguageSwitch
-
+const rangeLanguageSwitch = require('./const').rangeLanguageSwitch;
 
 // Load client secrets from a local file.
 fs.readFile('credentials.json', (err, content) => {
@@ -32,9 +26,12 @@ fs.readFile('credentials.json', (err, content) => {
  * @param {function} callback The callback to call with the authorized client.
  */
 function authorize(credentials, callback) {
-  const {client_secret, client_id, redirect_uris} = credentials.installed;
+  const { client_secret, client_id, redirect_uris } = credentials.installed;
   const oAuth2Client = new google.auth.OAuth2(
-      client_id, client_secret, redirect_uris[0]);
+    client_id,
+    client_secret,
+    redirect_uris[0],
+  );
 
   // Check if we have previously stored a token.
   fs.readFile(TOKEN_PATH, (err, token) => {
@@ -63,7 +60,11 @@ function getNewToken(oAuth2Client, callback) {
   rl.question('Enter the code from that page here: ', (code) => {
     rl.close();
     oAuth2Client.getToken(code, (err, token) => {
-      if (err) return console.error('Error while trying to retrieve access token', err);
+      if (err)
+        return console.error(
+          'Error while trying to retrieve access token',
+          err,
+        );
       oAuth2Client.setCredentials(token);
       // Store the token to disk for later program executions
       fs.writeFile(TOKEN_PATH, JSON.stringify(token), (err) => {
@@ -75,10 +76,9 @@ function getNewToken(oAuth2Client, callback) {
   });
 }
 
-
 function listMajors(auth) {
-  const sheets = google.sheets({version: 'v4', auth});
-  getLangSheet(sheets,rangeLanguageSwitch,"common");
+  const sheets = google.sheets({ version: 'v4', auth });
+  getLangSheet(sheets, rangeLanguageSwitch, 'common');
   //Read continue if multiple sheet
 }
 
@@ -89,19 +89,19 @@ function listMajors(auth) {
  */
 function getLangSheet(sheets, range, namespace) {
   sheets.spreadsheets.values.get(
-      {
-          spreadsheetId: '1l4OwGFqqUt9EfiHNzjouSvtwFQTCY5RXeyJtQKFNVT4',
-          range
-      },
-      (err, res) => {
-          if (err) return console.log('The API returned an error: ' + err);
-          const rows = res.data.values;
-          if (rows.length) {
-              loadJSON(rows, namespace);
-          } else {
-              console.log('No data found.');
-          }
+    {
+      spreadsheetId: '1l4OwGFqqUt9EfiHNzjouSvtwFQTCY5RXeyJtQKFNVT4',
+      range,
+    },
+    (err, res) => {
+      if (err) return console.log('The API returned an error: ' + err);
+      const rows = res.data.values;
+      if (rows.length) {
+        loadJSON(rows, namespace);
+      } else {
+        console.log('No data found.');
       }
+    },
   );
 }
 
@@ -110,14 +110,19 @@ function loadJSON(data, namespace) {
   let data_en = {};
   // let data_jp = {};
 
-
-  data.forEach(element => {
-    if(element.length){
-      data_en[element[0]]=element[1];
-      data_vi[element[0]]=element[2];
+  data.forEach((element) => {
+    if (element.length) {
+      data_en[element[0]] = element[1];
+      data_vi[element[0]] = element[2];
     }
   });
-  fs.writeFileSync('../../lang/vn/'+ namespace +'.json', JSON.stringify(data_vi, null, 4));
-  fs.writeFileSync('../../lang/en/'+ namespace +'.json', JSON.stringify(data_en, null, 4));
-  console.log(" GENERATOR LANGUAGE SUCCESS !!!")
+  fs.writeFileSync(
+    '../../lang/vn/' + namespace + '.json',
+    JSON.stringify(data_vi, null, 4),
+  );
+  fs.writeFileSync(
+    '../../lang/en/' + namespace + '.json',
+    JSON.stringify(data_en, null, 4),
+  );
+  console.log(' GENERATOR LANGUAGE SUCCESS !!!');
 }

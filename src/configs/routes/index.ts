@@ -1,71 +1,36 @@
-
 import { lazy } from 'react';
 export default [
   {
-    label: "Home",
+    label: 'Home',
     path: '/',
     exact: true,
-    isPrivate:false,
+    isPrivate: false,
     component: lazy(() => import('@Pages/Home/Home')),
-    layout: lazy(() => import('@Layouts/DefaultLayout/DefaultLayout'))
+    layout: lazy(() => import('@Layouts/DefaultLayout/DefaultLayout')),
   },
   {
-    label: "Login",
+    label: 'Login',
     path: '/user/login',
     exact: true,
-    isPrivate:false,
-    component: lazy(() => import("@Pages/Login/Login")),
-    layout: lazy(() => import('@Layouts/UserLayout/UserLayout'))
+    isPrivate: false,
+    component: lazy(() => import('@Pages/Login/Login')),
+    layout: lazy(() => import('@Layouts/UserLayout/UserLayout')),
   },
   {
-    label: "LogOut",
+    label: 'LogOut',
     path: '/user/logout',
     exact: true,
-    isPrivate:false,
-    component: lazy(() => import("@Pages/Login/Login")),
-    layout: lazy(() => import('@Layouts/UserLayout/UserLayout'))
+    isPrivate: false,
+    component: lazy(() => import('@Pages/Login/Login')),
+    layout: lazy(() => import('@Layouts/UserLayout/UserLayout')),
   },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   {
-    label: "Page Not Found",
+    label: 'Page Not Found',
     path: '/',
     exact: false,
-    isPrivate:false,
-    component: lazy(() => import("@Pages/PageNotFound/PageNotFound")),
-    layout: lazy(() => import('@Layouts/EmptyLayout/EmptyLayout'))
+    isPrivate: false,
+    component: lazy(() => import('@Pages/PageNotFound/PageNotFound')),
+    layout: lazy(() => import('@Layouts/EmptyLayout/EmptyLayout')),
   },
-] 
+];

@@ -1,79 +1,73 @@
-
 @import '~antd/dist/antd.css';
-@import './stylesheets/common.scss'
-@import './stylesheets/nprogress.scss'
-@import './stylesheets/reset.scss'
-@import './stylesheets/responsive.scss'
-
-@font-face {
-  font-family: "Roboto-Black";
+@import './stylesheets/common.scss' @import './stylesheets/nprogress.scss'
+  @import './stylesheets/reset.scss' @import './stylesheets/responsive.scss'
+  @font-face {
+  font-family: 'Roboto-Black';
   font-weight: bold;
   font-style: normal;
-  src: url("./assets/fonts/Roboto-Black.ttf") format("truetype");
+  src: url('./assets/fonts/Roboto-Black.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Roboto-Light";
+  font-family: 'Roboto-Light';
   font-weight: bold;
   font-style: normal;
-  src: url("./assets/fonts/Roboto-Light.ttf") format("truetype");
+  src: url('./assets/fonts/Roboto-Light.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Roboto-BlackItalic";
+  font-family: 'Roboto-BlackItalic';
   font-weight: bold;
   font-style: normal;
-  src: url("./assets/fonts/Roboto-BlackItalic.ttf") format("truetype");
+  src: url('./assets/fonts/Roboto-BlackItalic.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Roboto-Bold";
+  font-family: 'Roboto-Bold';
   font-weight: bold;
   font-style: normal;
-  src: url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
+  src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Roboto-Regular";
+  font-family: 'Roboto-Regular';
   font-weight: bold;
   font-style: normal;
-  src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
 }
-
 
 body {
-    margin: 0;
-    font-family: "Roboto-Regular";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    width: 100%;
-    height: 100%;
-  }
-  body.light-mode {
-    background-color: #fff;
-    color: #333;
-    transition: background-color 0.3s ease;
-  }
-  body.dark-mode {
-    background-color: #1a1919;
-    color: #999;
-  }
-  body::-webkit-scrollbar {
-    width: 0.5rem;
-  }
-   
-  body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-   
-  body::-webkit-scrollbar-thumb {
-    background-color: rgb(169, 169, 169);
-    outline: 1px solid slategrey;
-  }
-  #root{
-    display: flex;
-    width:100%;
-    height: 100%;
-  }
-  
+  margin: 0;
+  font-family: 'Roboto-Regular';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+}
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+body.dark-mode {
+  background-color: #1a1919;
+  color: #999;
+}
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
 
-  html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-  }
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(169, 169, 169);
+  outline: 1px solid slategrey;
+}
+#root {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}

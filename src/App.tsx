@@ -26,20 +26,20 @@ export default function App() {
   NProgress.start();
   useEffect(() => {
     NProgress.done();
-    return () => {
+             return () => {
     }
   }, [])
   return (
     <Div className="app">
       <I18nextProvider i18n={i18next}>
-        <BrowserRouter>
+                            <BrowserRouter>
           <React.Suspense fallback={<div className="fallback" />}>
-            <Provider store={store}>
+                                   <Provider store={store}>
               <PersistGate loading={null} persistor={persistor}>
                 <AppRouter />
               </PersistGate>
             </Provider>
-          </React.Suspense>
+                                   </React.Suspense>
         </BrowserRouter>
       </I18nextProvider>
     </Div>

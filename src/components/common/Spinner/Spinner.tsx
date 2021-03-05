@@ -1,17 +1,17 @@
 //Lib
 import React from 'react';
-import {Spin} from "antd"
+import { Spin } from 'antd';
 //Component
-import { Div} from "@Common/TagAntdNotSupport/TagAntdNotSupport"
+import { Div } from '@Common/TagAntdNotSupport/TagAntdNotSupport';
 //Styled Component
-import "./style.scss"
+import './style.scss';
 //Img
 //Const
 
 const Spinner = (props: any) => {
-    <Div className="sa_spinner">
-        <Spin tip="loading..."/>
-    </Div>
+  <Div className="sa_spinner">
+    <Spin tip="loading..." />
+  </Div>;
 };
 
-export default (Spinner);
+export default Spinner;

@@ -10,19 +10,16 @@ import React, { useEffect } from 'react';
 //export default withScrollToTop(Component)
 
 // *Hook
-const  WithScrollToTop=(WrapperComponent:any)=> {
-
-  const WithScrollToTopComponent= ()=> {
+const WithScrollToTop = (WrapperComponent: any) => {
+  const WithScrollToTopComponent = () => {
     // inside return function
     useEffect(() => {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
-  
-    }, []) 
-     return <WrapperComponent />;
-};
-return WithScrollToTopComponent;
-
+    }, []);
+    return <WrapperComponent />;
+  };
+  return WithScrollToTopComponent;
 };
 
-export default WithScrollToTop
+export default WithScrollToTop;

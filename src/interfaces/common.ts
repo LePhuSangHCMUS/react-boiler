@@ -1,7 +1,5 @@
-
 export interface IAction {
-    type: string
-    payload?: any,
-    error?:any
-  }
-  
+  type: string;
+  payload?: any;
+  error?: any;
+}
