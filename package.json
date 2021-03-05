@@ -190,6 +190,7 @@
     "connect-api-mocker": "^1.9.0",
     "express": "^4.17.1",
     "husky": "^5.1.3",
-    "is-ci": "^3.0.0"
+    "is-ci": "^3.0.0",
+    "prettier": "2.2.1"
   }
 }
