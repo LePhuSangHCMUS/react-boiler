@@ -112,12 +112,9 @@
     "lint": "prettier --check .",
     "format": "prettier --write .",
     "prepare": "is-ci || husky install .configHusky/husky",
-    "postinstall": "prepare",
+    "postinstall": "npm run prepare",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
-  },
-  "lint-staged": {
-    "*": "prettier --write"
   },
   "eslintConfig": {
     "extends": "react-app"
