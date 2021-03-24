@@ -5,6 +5,9 @@ const Img= function(props:any){
 const Div= function(props:any){
     return <div {...props } />
 }
+const P= function(props:any){
+    return <p {...props } />
+}
 const Input= function(props:any){
     return <input {...props } />
 }
@@ -19,5 +22,6 @@ export {
     Img,
     Label,
     Span,
-    Input
-}
+    Input,
+    P
+};

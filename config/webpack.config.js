@@ -172,8 +172,8 @@ module.exports = function (webpackEnv) {
       futureEmitAssets: true,
       // There are also additional JS chunk files if you use code splitting.
       chunkFilename: isEnvProduction
-        ? `static/js/[name].[contenthash:8].${new Date()}.chunk.js`
-        : isEnvDevelopment && `static/js/[name].${new Date()}.chunk.js`,
+        ? `static/js/[name].[contenthash:8].${Date.now()}.chunk.js`
+        : isEnvDevelopment && `static/js/[name].${Date.now()}.chunk.js`,
       // webpack uses `publicPath` to determine where the app is being served from.
       // It requires a trailing slash, or the file assets will get an incorrect path.
       // We inferred the "public path" (such as / or /my-project) from homepage.
@@ -586,8 +586,8 @@ module.exports = function (webpackEnv) {
       new MiniCssExtractPlugin({
         // Options similar to the same options in webpackOptions.output
         // both options are optional
-        filename: `static/css/[name].[contenthash:8].${new Date()}.css`,
-        chunkFilename: `static/css/[name].[contenthash:8].${new Date()}.chunk.css`,
+        filename: `static/css/[name].[contenthash:8].${Date.now()}.css`,
+        chunkFilename: `static/css/[name].[contenthash:8].${Date.now()}.chunk.css`,
       }),
       // Generate an asset manifest file with the following content:
       // - "files" key: Mapping of all asset filenames to their corresponding

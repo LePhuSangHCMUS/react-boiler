@@ -1,10 +1,9 @@
 
 @import '~antd/dist/antd.css';
-@import './stylesheets/common.scss'
-@import './stylesheets/nprogress.scss'
-@import './stylesheets/reset.scss'
-@import './stylesheets/responsive.scss'
 
+@import "./stylesheets/color.scss";
+@import "./stylesheets/responsive.scss";
+@import "./stylesheets/common.scss";
 @font-face {
   font-family: "Roboto-Black";
   font-weight: bold;
@@ -42,8 +41,10 @@ body {
     font-family: "Roboto-Regular";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
     width: 100%;
-    height: 100%;
+    overflow: overlay ;
+
   }
   body.light-mode {
     background-color: #fff;
@@ -66,13 +67,16 @@ body {
     background-color: rgb(169, 169, 169);
     outline: 1px solid slategrey;
   }
+  .rc-error_message{
+    color: red;
+    margin: 0;
+  }
   #root{
     display: flex;
     width:100%;
     height: 100%;
   }
   
-
   html {
     scroll-behavior: smooth;
     font-size: 62.5%;
