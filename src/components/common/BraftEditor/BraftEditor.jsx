@@ -23,7 +23,7 @@ BraftEditor.use(
 
 const BraftEditorComponent = (props) => {
   
-  const htmlString = `<p>Hello <b>World!</b></p>`
+  const htmlString = `<p style="text-align:center;" size="0" _root="undefined" __ownerID="undefined" __hash="undefined" __altered="false"><strong><span style="color:#07a9fe">dsdsdsvcvcvcvc</span></strong></p><p></p><p></p><p></p><p></p><div class="media-wrap image-wrap float-right" style="float:right"><img id="xxx" title="Images" src="/media/images/CTY2N3T1"/></div><p>fdfd</p><p>dfdf</p>`
   const editorRef = useRef();
 
 const [  editorState,setEditorState]=useState(BraftEditor.createEditorState(htmlString))
@@ -31,6 +31,8 @@ const [  editorState,setEditorState]=useState(BraftEditor.createEditorState(html
     setEditorState(editorState);
     // Get the root DOM element for the Editor
     const html = convertToHTML(editorState.getCurrentContent());
+
+    console.log(editorState.toHTML())
     // Get the rendered content from the DOM
   };
 
@@ -102,6 +104,7 @@ const [  editorState,setEditorState]=useState(BraftEditor.createEditorState(html
           value={editorState}
           id={"editor"}
           onChange={onChange}
+
           language={"en"}
           extendControls={extendControls}
           ref={editorRef}
