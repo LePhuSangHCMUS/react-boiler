@@ -14,13 +14,13 @@ module.exports = function(app) {
 //         }
 //     })
 //   );
-//   app.use('/media/', createProxyMiddleware({
-//     target: MEDIA_URL,
-//     changeOrigin: true,
-//     pathRewrite: {
-//         '^/media': '/'
-//     }
-// }))
+  app.use('/media/', createProxyMiddleware({
+    target: MEDIA_URL,
+    changeOrigin: true,
+    pathRewrite: {
+        '^/media': '/'
+    }
+}))
 //   app.use('/identity/', createProxyMiddleware({
 //     target: IDENTITY_URL,
 //     changeOrigin: true,
