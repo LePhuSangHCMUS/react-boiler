@@ -109,6 +109,9 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
+    "build:tailwind": "tailwind build ./src/tailwind.css -c ./tailwind.config.js -o ./src/base.css",
+    "prebuild": "npm run build:tailwind",
+    "prestart":"npm run build:tailwind",
     "start": "node scripts/start.js",
     "build": "GENERATE_SOURCEMAP=false node scripts/build.js",
     "test": "node scripts/test.js"
@@ -186,6 +189,8 @@
   "devDependencies": {
     "connect-api-mocker": "^1.9.0",
     "express": "^4.17.1",
-    "nock": "^13.0.5"
+    "nock": "^13.0.5",
+    "postcss": "^8.2.14",
+    "tailwindcss": "^2.1.2"
   }
 }
