@@ -43,6 +43,15 @@
             ],
             "@Hocs/*": [
                 "hocs/*"
+            ],
+            "@Reduxs/*": [
+                "reduxs/*"
+            ],
+            "@Recoils/*": [
+                "recoils/*"
+            ],
+            "@Apis/*": [
+                "apis/*"
             ]
         }
     }

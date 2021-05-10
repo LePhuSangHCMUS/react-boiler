@@ -1,17 +1,17 @@
 //Library
-import React from 'react'
-import { useDispatch , useSelector } from 'react-redux'
-import { useTranslation } from 'react-i18next';
+import HelmetTag from "@Common/HelmetTag/HelmetTag";
 //components
-import { Div } from "@Common/TagAntdNotSupport/TagAntdNotSupport"
-import HelmetTag from "@Common/HelmetTag/HelmetTag"
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Div } from "@Common/TagAntdNotSupport/TagAntdNotSupport";
 //Meta
-import meta from "../../meta/login"
-//Styles
-import "./styles.scss"
+import meta from "@Metas/login";
 //Action
-import { loginAction } from "./action"
+import { loginAction } from "@Reduxs/Login/action";
+import { Checkbox, Form, Input } from 'antd';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
+//Styles
+import "./styles.scss";
 
 
 

@@ -9,7 +9,7 @@ import { Api } from "@Configs/api/api";
 
 
 
-import {API_LOGIN,API_REGISTER} from "./endpoint"
+import {API_LOGIN,API_REGISTER} from "./user.endpoint"
 
 
 

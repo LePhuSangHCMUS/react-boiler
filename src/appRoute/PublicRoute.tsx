@@ -19,7 +19,7 @@ interface PublicRouteProps extends RouteProps {
       <Route
       path={path}
       render={(props) =>
-          isAuthenticated === false ?React.createElement( layout, props, React.createElement(component, props))
+          isAuthenticated === false ?React.createElement( layout, props, React.createElement(component,  {...props,...rest}))
            :
             <Redirect to="/app" />
         }

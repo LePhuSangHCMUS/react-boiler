@@ -8,7 +8,7 @@ import 'nprogress/nprogress.css'
 
 //components
 import { Div } from "@Common/TagAntdNotSupport/TagAntdNotSupport";
-import AppRouter from "@Utils/AppRoute/AppRoute";
+import AppRouter from "./appRoute/AppRoute";
 //config
 import i18next from "@Configs/i18n/i18n";
 //style
@@ -17,7 +17,7 @@ import "@StyleSheets/nprogress.scss"
 //const
 //store
 import { Provider } from 'react-redux';
-import storeConfig from './reduxConfig/store';
+import storeConfig from './reduxs/store';
 import { PersistGate } from 'redux-persist/integration/react'
 
 const { store, persistor } = storeConfig()

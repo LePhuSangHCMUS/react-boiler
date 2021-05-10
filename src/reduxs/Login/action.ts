@@ -1,9 +1,9 @@
 import ActionType from './action-type';
 import {IUserProfile} from "@Interfaces/user"
 import {ILoginCredentials} from "@Interfaces/credentials"
-import {userApi} from "../../api/user.api";
+import {userApi} from "@Apis/user.api";
 //Special : 
-import {notificationAction} from "@Pages/Notification/action"
+import {notificationAction} from "@Reduxs/Notification/action"
 import typesNotification from "@Pages/Notification/const"
 export const loginStart = () => ({
   type: ActionType.LOGIN_START,

@@ -1,5 +1,5 @@
 import ActionType from './action-type';
-import {INotificationState} from "./types"
+import {INotificationState} from "@Interfaces/notification"
 export const notificationClose = () => ({
   type: ActionType.NOTIFICATION_CLOSE,
   payload:null,

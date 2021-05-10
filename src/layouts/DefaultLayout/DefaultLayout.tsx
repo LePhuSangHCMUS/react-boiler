@@ -18,12 +18,12 @@ const DefaultLayout = (props: IProps) => {
   const { children } = props;
   return (
     <div className="sa_default_layout">
-      {/* <Header /> */}
+      <Header />
       <Div className="sa_main_content">
         {children}
       </Div>
       <Notification />
-      {/* <Footer /> */}
+      <Footer />
       <ButtonDarkMode />
     </div>
   )

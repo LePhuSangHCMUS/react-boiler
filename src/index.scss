@@ -38,7 +38,7 @@
 
 body {
     margin: 0;
-    font-family: "Roboto-Regular";
+    font-family: "Roboto-Black";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 100vh;
@@ -55,17 +55,8 @@ body {
     background-color: #1a1919;
     color: #999;
   }
-  body::-webkit-scrollbar {
-    width: 0.5rem;
-  }
-   
-  body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-   
-  body::-webkit-scrollbar-thumb {
-    background-color: rgb(169, 169, 169);
-    outline: 1px solid slategrey;
+  body{
+    @include scrollStyle;
   }
   .rc-error_message{
     color: red;

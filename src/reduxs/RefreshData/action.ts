@@ -1,5 +1,5 @@
 import ActionType from './action-type';
-import {IRefreshState} from "./types"
+import {IRefreshState} from "@Interfaces/refreshData"
 
 export const refreshDataSuccess = (result:IRefreshState) => ({
   type: ActionType.REFRESH_DATA_SUCCESS,

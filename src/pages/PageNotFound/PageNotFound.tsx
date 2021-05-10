@@ -1,7 +1,7 @@
 import pageFailed from "@Assets/images/PageNotFound/404-failed.svg";
 import { Div, P } from "@Common/TagAntdNotSupport/TagAntdNotSupport";
 //Hocs
-import withScrollToTop from "@Hocs/witchScrollToTop";
+import withScrollToTop from "@Hocs/withScrollToTop";
 import {
   Button
 } from "antd";
