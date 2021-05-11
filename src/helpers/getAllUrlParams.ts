@@ -6,7 +6,7 @@
  */
 
    
-var getAllUrlParams: any = function (url:string):object {
+const  getAllUrlParams: any = function (url:string):object {
     // get query string from url (optional) or window
     var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
 
@@ -71,6 +71,4 @@ var getAllUrlParams: any = function (url:string):object {
     return obj;
 }
 
-export default {
-    getAllUrlParams
-}
+export default  getAllUrlParams
