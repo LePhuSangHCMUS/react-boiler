@@ -1,18 +1,18 @@
 //Lib
 import React from 'react';
 //Component
-import { Div ,Img} from "@Common/TagAntdNotSupport/TagAntdNotSupport"
+import {Image} from "antd"
 //Styled Component
-import "./style.scss"
+import {NoDataFoundWrapper} from "./styled"
 //Img
 import noDataFound from "@Assets/images/Common/no-data-found.png"
 //Const
 
 const NoDataFound = () => {
   return (
-    <Div className="sa_no-data" >
-      <Img src={noDataFound} alt="Img"/>
-    </Div>
+    <NoDataFoundWrapper>
+      <Image src={noDataFound} alt="Img" preview={false}/>
+    </NoDataFoundWrapper>
   );
 };
 

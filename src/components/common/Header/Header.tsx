@@ -1,40 +1,40 @@
 //Lib
-import React from "react";
-import { Link } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
-
-//style
-import "./style.scss";
+//Icon
+import Logo from "@Assets/icons/logo/sa_logo.png";
+import ButtonSwitchLanguage from "@Common/ButtonSwitchLanguage/ButtonSwitchLanguage";
 //Component
-import { Div, Img } from "@Common/TagAntdNotSupport/TagAntdNotSupport";
-import LinkActive from "./LinkActive/LinkActive";
-import ButtonSwitchLanguage from "@Common/ButtonSwitchLanguage/ButtonSwitchLanguage"
-
+import { Img } from "@Components/common/HTMLTag/HTMLTag";
+import React from "react";
+import { useTranslation } from 'react-i18next';
+import { Link } from "react-router-dom";
 //Const
 import { headerData } from "./const";
-//Icon
-import Logo from "@Assets/icons/logo/sa_logo.png"
+import LinkActive from "./LinkActive/LinkActive";
+//styled
+import { HeaderWrapper, NavigatorWrapper, SwitchLanguageWrapper } from "./styled";
+
+
 
 const Header = () => {
   const { t, i18n } = useTranslation("common");
 
   return (
-    <Div className="sa_header">
+    <HeaderWrapper>
       <Link className="sa_logo" to="/">
         <Img src={Logo} />
       </Link>
-      <Div className="sa_navigator">
+      <NavigatorWrapper>
         {headerData.map((item, index) => {
           return <LinkActive key={index} to={item.path} navItemName={t(item.keyLang)} />;
         })}
-      </Div>
-      <Div className="sa_switch_language">
+      </NavigatorWrapper>
+      <SwitchLanguageWrapper>
         <ButtonSwitchLanguage onChangeLanguage={(langType: string) => {
           i18n.changeLanguage(langType);
           localStorage.setItem('lang', langType)
         }} />
-      </Div>
-    </Div>
+      </SwitchLanguageWrapper>
+    </HeaderWrapper>
   );
 };
 

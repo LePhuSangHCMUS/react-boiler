@@ -1,18 +1,15 @@
 //Lib
-// import {Spin} from "antd"
+import {Spin} from "antd"
 //Component
-import { Div } from "@Common/TagAntdNotSupport/TagAntdNotSupport";
 import React from "react";
 //Styled Component
-import "./styles.scss";
+import { } from "./styled";
 //Img
 //Const
 
 const Spinner = (props:any) => {
   return (
-    <Div className="rc-spinner">
-				<div className="spinner-content"></div>
-    </Div>
+    <Spin/>
   );
 };
 

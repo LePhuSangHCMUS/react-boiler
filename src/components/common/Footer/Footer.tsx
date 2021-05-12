@@ -1,16 +1,14 @@
 //Lib
 import React from 'react';
-//Component
-import { Div } from "@Common/TagAntdNotSupport/TagAntdNotSupport"
 //Styled Component
-import "./styles.scss"
+import { FooterWrapper } from "./styled";
 //Const
 
 const Footer = () => {
   return (
-    <Div className="sa_footer" >
+    <FooterWrapper>
       Copyright: Le Phu Sang
-    </Div>
+    </FooterWrapper>
   );
 };
 

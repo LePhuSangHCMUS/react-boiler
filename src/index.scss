@@ -67,7 +67,16 @@ body {
     width:100%;
     height: 100%;
   }
-  
+  :root {
+    --toggle-size: 1.5rem;
+    --switch-w: 4em;
+    --switch-h: 2em;
+    --switch-handle-scale: .65;
+    --switch-off-handle-x: -.125em;
+    --switch-on-handle-x: calc(100% - .125em);
+    --switch-transition-duration: .2s;
+}
+    
   html {
     scroll-behavior: smooth;
     font-size: 62.5%;

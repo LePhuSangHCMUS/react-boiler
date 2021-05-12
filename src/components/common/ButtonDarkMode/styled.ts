@@ -1,16 +1,8 @@
+import preFixStyled from "@Configs/styled-components/";
+const styled = preFixStyled("BUTTON_DARK_MODE");
 
-:root {
-    --toggle-size: 1.5rem;
-    --switch-w: 4em;
-    --switch-h: 2em;
-    --switch-handle-scale: .65;
-    --switch-off-handle-x: -.125em;
-    --switch-on-handle-x: calc(100% - .125em);
-    --switch-transition-duration: .2s;
-}
-    
-.sa_button_dark_mode{
-    position:fixed;
+const ButtonDarkModeWrapper = styled("div")`
+ position:fixed;
     bottom: 20px;
     right: 20px;   
     #theme-toggle {
@@ -60,5 +52,6 @@
     }
     
 
-    
-}
+`;
+
+export { ButtonDarkModeWrapper };

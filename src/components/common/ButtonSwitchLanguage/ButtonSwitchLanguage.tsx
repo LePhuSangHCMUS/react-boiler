@@ -1,15 +1,13 @@
 
 
 //Lib
-import React from 'react';
 //Component
-import { Select } from "antd";
-import { Img } from "@Common/TagAntdNotSupport/TagAntdNotSupport";
+import { Image, Select } from "antd";
 //Styled Component
 import "antd/dist/antd.css";
-import "./styles.scss";
+import React from 'react';
 //Const
-import { countryFlags } from "./const"
+import { countryFlags } from "./const";
 
 interface IProps {
   onChangeLanguage: Function;
@@ -33,7 +31,7 @@ const ButtonSwitchLanguage: React.FC<IProps> = (props) => {
         return <Option key={item.key}
           value={item.value}
         >
-          <Img className="sa_flag-icon" src={item.flagIcon} alt={item.alt} />
+          <Image style={{width: "30px"}}  src={item.flagIcon} preview	={false} alt={item.alt} />
         </Option>
       })}
     </Select>

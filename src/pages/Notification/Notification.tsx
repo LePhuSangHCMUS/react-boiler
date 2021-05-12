@@ -4,7 +4,6 @@ import {useSelector} from "react-redux"
 //Component
 import { notification } from 'antd';
 //Styled Component
-import "./style.scss"
 //Const
 //Types
 const Notification = () => {
