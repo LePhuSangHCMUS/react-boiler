@@ -7,7 +7,7 @@ import 'nprogress/nprogress.css'
 
 
 //components
-import { Div } from "@Common/TagAntdNotSupport/TagAntdNotSupport";
+import { Div } from "@Components/common/HTMLTag/HTMLTag";
 import AppRouter from "./appRoute/AppRoute";
 //config
 import i18next from "@Configs/i18n/i18n";

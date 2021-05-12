@@ -1,7 +1,7 @@
 //Lib
 // import {Spin} from "antd"
 //Component
-import { Div } from "@Common/TagAntdNotSupport/TagAntdNotSupport";
+import { Div } from "@Components/common/HTMLTag/HTMLTag";
 //Img
 //Const
 import BraftEditor from "braft-editor";
@@ -11,7 +11,7 @@ import "braft-extensions/dist/table.css";
 import React, { useRef, useState } from "react";
 import ReactDOM from "react-dom";
 //Styled Component
-import "./styles.scss";
+import {BraftEditorWrapper} from "./styled";
 import {convertToHTML} from "draft-convert"
 BraftEditor.use(
   table({
@@ -99,7 +99,7 @@ const [  editorState,setEditorState]=useState(BraftEditor.createEditorState(html
   xhr.send(fd)
   }
   return (
-    <Div className="sa-braft-editor">
+    <BraftEditorWrapper>
        <BraftEditor
           value={editorState}
           id={"editor"}
@@ -110,7 +110,7 @@ const [  editorState,setEditorState]=useState(BraftEditor.createEditorState(html
           ref={editorRef}
           media={{uploadFn:uploadFunMedia}}
         />
-    </Div>
+    </BraftEditorWrapper>
   );
 };
 

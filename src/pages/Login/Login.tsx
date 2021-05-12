@@ -1,7 +1,5 @@
 //Library
 import HelmetTag from "@Common/HelmetTag/HelmetTag";
-//components
-import { Div } from "@Common/TagAntdNotSupport/TagAntdNotSupport";
 //Meta
 import meta from "@Metas/login";
 //Action
@@ -11,7 +9,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 //Styles
-import "./styles.scss";
+import { MainContent } from "./styled";
 
 
 
@@ -47,7 +45,7 @@ const dispatch = useDispatch()
 // ==================  HOOK
 
 // ==================  MAIN START   ===================
-  return (<Div className="sa_page_login">
+  return (<MainContent>
     <HelmetTag meta={meta} />
     <Form
       {...layout}
@@ -82,7 +80,7 @@ const dispatch = useDispatch()
         </Button>
       </Form.Item> */}
     </Form>
-  </Div>
+  </MainContent>
   );
 };
 

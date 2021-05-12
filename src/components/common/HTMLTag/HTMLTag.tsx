@@ -1,4 +1,5 @@
 import React from 'react';
+
 const Img= function(props:any){
     return <img {...props } />
 }

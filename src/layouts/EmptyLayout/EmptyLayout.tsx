@@ -1,12 +1,7 @@
 //Lib
 import React from "react";
-//Components
-import Header from "@Common/Header/Header";
-import Footer from "@Common/Footer/Footer";
-import { Div } from "@Common/TagAntdNotSupport/TagAntdNotSupport"
-import ButtonDarkMode from "@Common/ButtonDarkMode/ButtonDarkMode"
-//Style
-import "./style.scss"
+//Styled
+import { EmptyLayoutWrapper } from "./styled";
 interface IProps {
   children: React.ReactNode;
 }
@@ -14,11 +9,9 @@ interface IProps {
 const DefaultLayout = (props: IProps) => {
   const { children } = props;
   return (
-    <div className="sa_default_layout">
-      <Div className="sa_main_content">
+    <EmptyLayoutWrapper>
         {children}
-      </Div>
-    </div>
+    </EmptyLayoutWrapper>
   );
 };
 

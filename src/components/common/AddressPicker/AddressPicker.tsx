@@ -1,15 +1,12 @@
 //Lib
-import React, { useState, useEffect } from "react";
-import axios from "axios"
-//Component
-import { Img, Div } from "@Common/TagAntdNotSupport/TagAntdNotSupport";
-import { Col, Select, Row } from 'antd';
+import { Col, Row, Select } from 'antd';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 //Const
-import { addressDefault } from "./const"
-
+import { addressDefault } from "./const";
 //Styled Component
+import { AddressPickerWrapper } from "./styles";
 
-import "./styles.scss";
 //Const
 const { Option } = Select;
 
@@ -94,7 +91,7 @@ const AddressPicker = (props: IProps) => {
   }
 
   return (
-    <Div className="rc-address_picker">
+    <AddressPickerWrapper>
       <Row gutter={[16, 16]} >
       <Col sm={24} md={12} >
           <Select
@@ -151,7 +148,7 @@ const AddressPicker = (props: IProps) => {
       </Row>
 
 
-    </Div>
+    </AddressPickerWrapper>
   );
 };
 

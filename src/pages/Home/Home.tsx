@@ -1,14 +1,14 @@
 import HelmetTag from "@Common/HelmetTag/HelmetTag";
-import {P} from "@Common/TagAntdNotSupport/TagAntdNotSupport"
 import meta from "@Metas/home";
 import React from "react";
+
+import {MainContent} from "./styled"
 const Home = (props:any) => {
   return (
-    <>
+    <MainContent>
       <HelmetTag meta={meta} />
       Home
-      <P>Titke</P>
-    </>
+    </MainContent>
   );
 };
 

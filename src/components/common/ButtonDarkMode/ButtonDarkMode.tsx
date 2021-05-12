@@ -1,19 +1,17 @@
 //Lib
-import React from "react";
 //Component
-import { Img, Div, Input, Label, Span } from "@Common/TagAntdNotSupport/TagAntdNotSupport";
-//Styled Component
-// import DarkModeToggle from "react-dark-mode-toggle";
+import { Input, Label, Span } from "@Components/common/HTMLTag/HTMLTag";
+import React from "react";
 import useDarkMode from "use-dark-mode";
-import { Switch } from "antd";
-import "./styles.scss";
+//Styled Component
+import { ButtonDarkModeWrapper } from "./styled";
 //Const
 
 const ButtonDarkMode = (props: any) => {
   const darkMode = useDarkMode(false);
 
   return (
-    <Div className="sa_button_dark_mode">
+    <ButtonDarkModeWrapper>
       <Input type="checkbox" id="theme-toggle" defaultChecked={localStorage.getItem("darkMode") === 'true' ? true : false} />
       <Label
         htmlFor="theme-toggle"
@@ -22,7 +20,7 @@ const ButtonDarkMode = (props: any) => {
         }}>
         <Span></Span>
       </Label>
-    </Div>
+    </ButtonDarkModeWrapper>
   );
 };
 
