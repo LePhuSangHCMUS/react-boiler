@@ -19,9 +19,8 @@ const DefaultLayout = (props: IProps) => {
   return (
     <UserLayoutWrapper>
       <Header />
-        {children}
+      {children}
       <Notification />
-      <ButtonDarkMode />
       <Footer />
     </UserLayoutWrapper>
   );
