@@ -36,25 +36,6 @@
 }
 
 
-body {
-    margin: 0;
-    font-family: "Roboto-Black";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    height: 100vh;
-    width: 100%;
-    overflow: overlay ;
-
-  }
-  body.light-mode {
-    background-color: #fff;
-    color: #333;
-    transition: background-color 0.3s ease;
-  }
-  body.dark-mode {
-    background-color: #1a1919;
-    color: #999;
-  }
   body{
     @include scrollStyle;
   }

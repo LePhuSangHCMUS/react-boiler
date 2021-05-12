@@ -8,15 +8,14 @@ import { ButtonDarkModeWrapper } from "./styled";
 //Const
 
 const ButtonDarkMode = (props: any) => {
-  const darkMode = useDarkMode(false);
-
+const {toggleTheme,theme} =props;
   return (
     <ButtonDarkModeWrapper>
-      <Input type="checkbox" id="theme-toggle" defaultChecked={localStorage.getItem("darkMode") === 'true' ? true : false} />
+      <Input type="checkbox" id="theme-toggle" defaultChecked={theme === 'dark' ? true : false} />
       <Label
         htmlFor="theme-toggle"
         onClick={() => {
-          darkMode.toggle();
+          toggleTheme()
         }}>
         <Span></Span>
       </Label>

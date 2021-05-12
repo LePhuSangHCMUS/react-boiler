@@ -20,7 +20,6 @@ const DefaultLayout = (props: IProps) => {
         {children}
       <Notification />
       <Footer />
-      <ButtonDarkMode />
     </DefaultLayoutWrapper>
   )
 };
