@@ -1,9 +1,7 @@
 
 @import '~antd/dist/antd.css';
 
-@import "./stylesheets/color.scss";
 @import "./stylesheets/responsive.scss";
-@import "./stylesheets/common.scss";
 @font-face {
   font-family: "Roboto-Black";
   font-weight: bold;
@@ -36,13 +34,6 @@
 }
 
 
-  body{
-    @include scrollStyle;
-  }
-  .rc-error_message{
-    color: red;
-    margin: 0;
-  }
   #root{
     display: flex;
     width:100%;
