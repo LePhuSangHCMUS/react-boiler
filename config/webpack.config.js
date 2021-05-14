@@ -310,6 +310,7 @@ module.exports = function (webpackEnv) {
         "@Reduxs": path.resolve("src/reduxs"),
         "@Recoil": path.resolve("src/recoils"),
         "@Apis": path.resolve("src/apis"),
+        "@Constants": path.resolve("src/constants"),
         // Allows for better profiling with ReactDevTools
         ...(isEnvProductionProfile && {
           'react-dom$': 'react-dom/profiling',
