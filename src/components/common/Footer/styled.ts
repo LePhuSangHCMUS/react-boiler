@@ -1,6 +1,4 @@
-
-import preFixStyled from "@Configs/styled-components/";
-const styled=preFixStyled("FOOTER");
+import styled from 'styled-components/macro'
 
 
 const FooterWrapper = styled("div")`
@@ -11,6 +9,6 @@ height: 100px;
   justify-content: center;
   align-items: center;
 
-`;
+` as any;
 
 export {FooterWrapper };

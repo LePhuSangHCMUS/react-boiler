@@ -5,12 +5,12 @@ import { Redirect, Route, RouteProps } from 'react-router-dom'
 // import { getAuth } from '@/selectors'
 
 interface PrivateRouteProps extends RouteProps {
-  component: any,
+  page: any,
   path:string,
   layout:any
 }
 
- const PrivateRoute: React.FC<PrivateRouteProps> = ({ component,path,layout, ...rest }) => {
+ const PrivateRoute: React.FC<PrivateRouteProps> = ({ page,path,layout, ...rest }) => {
   // const { isAuthenticated } = useSelector(getAuth)
   const  isAuthenticated  = true;
 
@@ -18,7 +18,7 @@ interface PrivateRouteProps extends RouteProps {
     <Route
     path={path}
     render={(props) =>
-        isAuthenticated === true ?React.createElement( layout, props, React.createElement(component,  {...props,...rest}))
+        isAuthenticated === true ?React.createElement( layout, props, React.createElement(page,  {...props,...rest}))
          :
           <Redirect to="/" />
       }

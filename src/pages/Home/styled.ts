@@ -1,9 +1,5 @@
 
-import preFixStyled from "@Configs/styled-components/";
-const styled=preFixStyled("HOME_PAGE");
-
-
-
+import styled from 'styled-components/macro'
 const MainContent = styled("div")`
   display: flex;
   justify-content: center;
@@ -13,6 +9,6 @@ const MainContent = styled("div")`
   background-size: 100% auto;
   // width: 100%;
   min-height: 100vh;
-`;
+` as any;
 
 export {MainContent}

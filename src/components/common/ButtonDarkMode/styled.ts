@@ -1,5 +1,5 @@
-import preFixStyled from "@Configs/styled-components/";
-const styled = preFixStyled("BUTTON_DARK_MODE");
+import styled from 'styled-components/macro'
+
 
 const ButtonDarkModeWrapper = styled("div")`
  position:fixed;
@@ -52,6 +52,6 @@ const ButtonDarkModeWrapper = styled("div")`
     }
     
 
-`;
+` as any;
 
 export { ButtonDarkModeWrapper };

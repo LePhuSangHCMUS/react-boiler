@@ -1,5 +1,4 @@
-import preFixStyled from "@Configs/styled-components/";
-const styled = preFixStyled("NAV_ITEM");
+import styled from 'styled-components/macro'
 
 
 export {  };

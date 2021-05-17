@@ -1,7 +1,4 @@
-import preFixStyled from "@Configs/styled-components/";
-const styled=preFixStyled("PAGE_NOT_FOUND");
-
-
+import styled from 'styled-components/macro'
 
 const MainContent = styled("div")`
  width: 100%;
@@ -12,6 +9,6 @@ const MainContent = styled("div")`
     box-sizing: border-box;
     padding:5rem 10%;
     text-align: center;
-`;
+` as any;
 
 export {MainContent}

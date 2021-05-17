@@ -5,13 +5,13 @@ import { Redirect, Route, RouteProps } from 'react-router-dom'
 // import { getAuth } from '@/selectors'
 
 interface PublicRouteProps extends RouteProps {
-  component: any,
+  page: any,
   path:string,
   layout:any
 }
 
 
-  const PublicRoute: React.FC<PublicRouteProps> = ({ component,path,layout, ...rest }) => {
+  const PublicRoute: React.FC<PublicRouteProps> = ({ page,path,layout, ...rest }) => {
     // const { isAuthenticated } = useSelector(getAuth)
     const  isAuthenticated  = false
   
@@ -19,7 +19,7 @@ interface PublicRouteProps extends RouteProps {
       <Route
       path={path}
       render={(props) =>
-          isAuthenticated === false ?React.createElement( layout, props, React.createElement(component,  {...props,...rest}))
+          isAuthenticated === false ?React.createElement( layout, props, React.createElement(page,  {...props,...rest}))
            :
             <Redirect to="/app" />
         }

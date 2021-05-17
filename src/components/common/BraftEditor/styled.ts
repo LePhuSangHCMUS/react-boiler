@@ -1,11 +1,8 @@
-
-
-import preFixStyled from "@Configs/styled-components/";
-const styled = preFixStyled("BRAFT_EDITOR");
+import styled from 'styled-components/macro'
 
 
 
-const BraftEditorWrapper = styled("div")``
+const BraftEditorWrapper = styled("div")`` as any;
 
 export {
   BraftEditorWrapper

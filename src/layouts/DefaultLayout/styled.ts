@@ -1,7 +1,4 @@
-import preFixStyled from "@Configs/styled-components";
-const styled=preFixStyled("DEFAULT_LAYOUT");
-
-
+import styled from "styled-components/macro"
 
 
 
@@ -9,7 +6,7 @@ const styled=preFixStyled("DEFAULT_LAYOUT");
 const DefaultLayoutWrapper = styled("div")`
   width: 100%;
   min-height: 100vh;
-`;
+` as any;
 
 
 export { DefaultLayoutWrapper };

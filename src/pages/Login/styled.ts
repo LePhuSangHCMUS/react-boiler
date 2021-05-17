@@ -1,7 +1,4 @@
-
-import preFixStyled from "@Configs/styled-components/";
-const styled=preFixStyled("LOGIN_PAGE");
-
+import styled from 'styled-components/macro'
 
 
 const MainContent = styled("div")`
@@ -13,6 +10,6 @@ const MainContent = styled("div")`
   background-size: 100% auto;
   // width: 100%;
   min-height: 100vh;
-`;
+` as any;
 
 export {MainContent}

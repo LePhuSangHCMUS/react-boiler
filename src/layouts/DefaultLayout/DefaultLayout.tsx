@@ -1,12 +1,11 @@
 //Lib
-import ButtonDarkMode from "@Common/ButtonDarkMode/ButtonDarkMode";
 import Footer from "@Common/Footer/Footer";
 //Components
 import Header from "@Common/Header/Header";
 import Notification from "@Pages/Notification/Notification";
 import React from "react";
 //Styled
-import { DefaultLayoutWrapper} from "./styled";
+import { DefaultLayoutWrapper } from "./styled";
 interface IProps {
   children: React.ReactNode;
 }

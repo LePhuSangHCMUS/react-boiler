@@ -6,7 +6,7 @@ export default [
     path: '/',
     exact: true,
     isPrivate:false,
-    component: lazy(() => import('@Pages/Home/Home')),
+    page: lazy(() => import('@Pages/Home/Home')),
     layout: lazy(() => import('@Layouts/DefaultLayout/DefaultLayout'))
   },
   {
@@ -14,7 +14,7 @@ export default [
     path: '/user/login',
     exact: true,
     isPrivate:false,
-    component: lazy(() => import("@Pages/Login/Login")),
+    page: lazy(() => import("@Pages/Login/Login")),
     layout: lazy(() => import('@Layouts/UserLayout/UserLayout'))
   },
   {
@@ -22,7 +22,7 @@ export default [
     path: '/user/logout',
     exact: true,
     isPrivate:false,
-    component: lazy(() => import("@Pages/Login/Login")),
+    page: lazy(() => import("@Pages/Login/Login")),
     layout: lazy(() => import('@Layouts/UserLayout/UserLayout'))
   },
 
@@ -65,7 +65,7 @@ export default [
     path: '/',
     exact: false,
     isPrivate:false,
-    component: lazy(() => import("@Pages/PageNotFound/PageNotFound")),
+    page: lazy(() => import("@Pages/PageNotFound/PageNotFound")),
     layout: lazy(() => import('@Layouts/EmptyLayout/EmptyLayout'))
   },
 ] 

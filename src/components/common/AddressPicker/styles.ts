@@ -1,9 +1,7 @@
+import styled from 'styled-components/macro'
 
 
-import preFixStyled from "@Configs/styled-components/";
-const styled = preFixStyled("ADDRESS_PICKER");
-
-const AddressPickerWrapper = styled("div")``
+const AddressPickerWrapper = styled("div")`` as any;
 
 export {
   AddressPickerWrapper
